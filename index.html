@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="En esta pagina podras comprar ricos menu y solicitar que te lo lleven, solo queda disfrutar">
+    <meta name="keywords" content="comida,menu,pedido,delivery">
+    <link rel="stylesheet" href="misestilos.css">
+    <title>Pedidos Ya</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="imagenes/ya transparente.png" alt="logo de la empresa" width="100px">
+            <p>Pedidos Ya</p>
+            <!--aca va el nombre de la empresa-->
+        </div>
+        <nav>
+            <a href="registro.html" target="_blank" rel="noopener noreferrer">Login/Registro</a>
+            <a href="micuenta.html" target="_blank" rel="noopener noreferrer">Mi cuenta</a>
+            <a href="nosotros.html" target="_blank" rel="noopener noreferrer">Sobre nosotros</a>
+            <!--les parece agregar quienes somos y que hacemos ??-->
+            <a href="#cajaPedido">Mi pedido</a>
+            <a href="#contacto">Contacto</a>
+            <!--va en el footer-->
+        </nav>
+    </header>
+
+
+
+    <div class="secciones">
+        <!--cada boton llevara abajo hasta donde este la seleccion-->
+        <div><a class="botones-seleccion" href="#menu1">Menu 1</a></div>
+        <div><a class="botones-seleccion" href="#menu2">Menu 2</a></div>
+        <div><a class="botones-seleccion" href="#menu3">Menu 3</a></div>
+        <div><a class="botones-seleccion" href="#menu4">Menu 4</a></div>
+    </div>
+
+    <div id="bienvenido">
+        <!--aca podria ir la foto de presentacion con css, podria ocupar ancho de la pantalla y 200px de alto-->
+        <p>&#128522 bienvenido a pedido ya &#128522</p>
+    </div>
+
+
+    <!--aca va el menu de seleccion-->
+    <div class="menus">
+        <div id="menu1">
+            <p><span id="nombreMenu1">Hamburguesa:</span><br>
+                Pan americano con semillas de sésamo,<br>
+                carne picada de primera,feta de queso,<br>
+                rodaja de cebolla,rodaja de tomate
+            </p>
+            <div id="hamburguesa">
+            </div>
+            <p id="precio">$<span id="precioMenu1">500</span></p>
+            <div id="formulario-hamburguesa">
+                <form>
+                    <input  class="control" type="number" name="cantidad" id="cant1">
+                </form>
+                <button onclick="comprarMenu1()">Comprar menu</button>
+            </div>
+        </div>
+
+        <div id="menu2">
+            <p><span id="nombreMenu2">Milanesa napolitana</span>:<br>
+                Milanesa grande con una cubierta de queso muzzarela y 3 rodajas de tomate,<br>
+                acompañado con porcion de papas fritas,<br>
+                1 rodaja de limon,2 sobres de aderezos a eleccion
+            </p>
+            <div id="milanesa">
+
+            </div>
+            <p id="precio">$ <span id="precioMenu2">500</span></p>
+            <div id="formulario-milanesa">
+                <form>
+                    <div id="opciones">
+                        <label for="aderezos">Selecciona tu aderezo</label>
+                            <select name="aderezos" id="aderezos">
+                            <option value="sinAderezo">Sin aderezo</option>
+                            <option value="Mayonesa">Mayonesa</option>
+                            <option value="Sabora">Sabora</option>
+                            <option value="Ketchup">Ketchup</option>
+                        </select>
+                    </div>
+                    <div id="controles">
+                        <input class="controlm" type="number" name="cantidad" id="cant2">
+                    </div>
+                </form>
+                <button onclick="comprarMenu2()">Comprar menu</button>
+            </div>
+        </div>
+
+        <div id="menu3">
+            <p><span id="nombreMenu3">Pizza grande</span>:<br>
+                pizza casera con salsa de tomate,<br>
+                queso muzzarela,aceitunas,oregano
+            </p>
+            <div id="pizza">
+
+            </div>
+            <p id="precio">$ <span id="precioMenu3">750</span></p>
+            <div id="formulario-pizza">
+                <form>
+                    <input class="controlp" type="number" name="cantidad" id="cant3">
+                </form>
+                <button onclick="comprarMenu3()">Comprar menu</button>
+            </div>
+        </div>
+
+        <div id="menu4">
+            <p><span id="nombreMenu4">Ravioles</span>:<br>
+                Ravioles con seleccion de sabor,<br>
+                25 gramos de queso rayado,salsa a seleccion
+            </p>
+            <div id="ravioles">
+
+            </div>
+            <p id="precio">$ <span id="precioMenu4">950</span></p>
+            <div id="formulario-ravioles">
+                <form>
+                    <div id="opciones">
+                        <label for="sabores">Selecciona un sabor</label>
+                        <select name="sabores" id="sabores">
+                            <option value="sinSalsa">Sin salsa</option>
+                            <option value="Salsabl">Salsa blanca</option>
+                            <option value="Salsafi">Salsa fileto</option>
+                        </select>
+                    </div>
+                    <div id="controles">
+                        <input class="controlr" type="number" name="cantidad" id="cant4">
+                    </div>
+                </form>
+                <button onclick="comprarMenu4()">Comprar menu</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cajaPedido">
+        <h2>Mi pedido</h2>
+        <p id="nuevoPedido"></p>
+    </div>
+
+    <footer>
+        <div>creado por Davidask611 &#128155</div>
+        <div>copyright 2022 - Todos los derechos reservados</div>
+        <div id="contacto">11-2233-4455 - <a href=»mailto:correo@correo.com»>pedidoya@gmail.com</a></div>
+    </footer>
+    <script src="miscomandos.js"></script>
+</body>
+
+</html>

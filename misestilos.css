@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*mantiene el contenido al limite de la pagina, lo ancho y alto se suma automatico con el borde de la caja*/
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "secciones secciones"
+    "bienvenido bienvenido"
+    "menus menus"
+    "cajapedido cajapedido"
+    "footer footer";
+  width: 80%;
+  margin: auto;
+  background-image: url(imagenes/verdura.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  grid-area: header;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: burlywood;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header div img {
+  width: 100px;
+}
+
+header div p {
+  text-align: center;
+  color: red;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(15, 15, 15);
+}
+
+header a:hover {
+  color: red;
+  font-size: 2em;
+  transition: 2s;
+}
+
+/**/
+
+.secciones {
+  grid-area: secciones;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  margin: 30px 0 20px 0;
+}
+
+.secciones div {
+  align-content: center;
+  font-size: 10mm;
+  padding: 0 30px 0 30px;
+}
+
+.secciones div a {
+  text-align: center;
+  text-decoration: none;
+  color: bisque;
+}
+
+/*banner*/
+
+#bienvenido {
+  grid-area: bienvenido;
+  text-align: center;
+  color: aliceblue;
+  font-size: 10mm;
+  margin: 30px 0 50px 0;
+  background-color: rgba(201, 144, 201, 0.842);
+}
+
+/*menu seleccion*/
+.menus {
+  grid-area: menus;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0 30px 0;
+}
+/*menu 1*/
+#menu1 {
+  width: 100%;
+  background-image: url(imagenes/hamburguesa.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: azure;
+}
+
+#menu1:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  border-radius: 30%;
+}
+
+#menu1 p {
+  text-align: center;
+  font: 1.3em sans-serif;
+  width: 80%;
+  margin: 10px auto 0 auto;
+}
+#formulario-hamburguesa {
+  width: 50%;
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
+.control {
+  color: black;
+  width: 90%;
+  margin: 5px auto 10px auto;
+  font: 1.2em sans-serif;
+}
+
+/*menu 2*/
+#menu2 {
+  width: 100%;
+  height: auto;
+  background-image: url(imagenes/milanesa.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(250, 245, 246);
+}
+
+#menu2:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  border-radius: 30%;
+  font-weight: bold;
+}
+
+#menu2 p {
+  text-align: center;
+  font: 1.3em sans-serif;
+  font-weight: bold;
+  width: 80%;
+  margin: 10px auto 0 auto;
+}
+#formulario-milanesa {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+#opciones{
+  width: 80%;
+  margin: auto;
+  color: white;
+  font: 1.2em sans-serif;
+}
+#controles {
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.controlm {
+  color: black;
+  width: 100%;
+  margin: 5px 0 2px 0;
+  font: 1.2em sans-serif;
+}
+
+/*menu 3*/
+#menu3 {
+  background-image: url(imagenes/sabrosa-pizza-pepperoni-champinones-aceitunas_79782-1976.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  color: palegreen;
+}
+#menu3 p {
+  text-align: center;
+  font: 1.5em sans-serif;
+  font-weight: bold;
+  min-width: 80%;
+  margin: 20px auto 0 auto;
+}
+
+#menu3 p:hover {
+  min-width: 80%;
+  margin: 20px auto 0 auto;
+}
+#formulario-pizza {
+  width: 90%;
+  margin: auto;
+  color: red;
+  text-align: center;
+}
+
+#formulario-pizza form {
+  width: 50%;
+  margin: 10px auto 10px auto;
+  text-align: center;
+}
+
+.controlp {
+  color: black;
+  width: 100%;
+  margin-top: 7px;
+  font: 1.2em sans-serif;
+}
+
+#menu3:hover {
+  transform: scale(1.1);
+  transition: 1.5s;
+  transform: translateY(-10%);
+  border-radius: 30%;
+  border: dotted;
+  background-color: #db1b35;
+  color: #09f014;
+}
+/*menu 4*/
+#menu4 {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  background-image: url(imagenes/ravioles\ lejos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(27, 10, 253);
+}
+
+#menu4:hover {
+  transform: scale(1.1);
+  transition: 1.5s;
+  transform: translateY(-10%);
+  border-radius: 30%;
+  border: dotted;
+  font-weight: bold;
+}
+
+#menu4 p {
+  text-align: center;
+  font: 1.3em sans-serif;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  font-weight: bold;
+}
+#formulario-ravioles {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+#formulario-ravioles form {
+  width: 100%;
+  margin: 15px auto 10px auto;
+}
+#opciones{
+  width: 80%;
+  margin: auto;
+  color: white;
+  font: 1.2em sans-serif;
+}
+.controlr {
+  color: black;
+  width: 100%;
+  margin-top: 10px;
+  font: 1.2em sans-serif;
+}
+
+/*pie de pagina*/
+footer {
+  grid-area: footer;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  color: rgb(246, 246, 250);
+  font-size: 5mm;
+}
+footer a {
+  text-decoration: none;
+  color: rgb(246, 246, 250);
+}
+
+/* pedido */
+
+#cajaPedido {
+  display: grid;
+  grid-area: cajapedido;
+  width: 100%;
+  border: solid red;
+  text-align: center;
+  margin-top: 10px;
+  background-color: rgb(252, 249, 251);
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 50px 0 50;
+  color: rgb(53, 11, 243);
+}
+
+#nuevoPedido {
+  margin: 20px 0 20px 0;
+  font-size: x-large;
+  color: rgb(248, 6, 38);
+}
